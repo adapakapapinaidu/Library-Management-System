@@ -13,10 +13,10 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // all endpoints
+                registry.addMapping("/**") // allow all endpoints
                         .allowedOrigins(
-                            "http://localhost:3000", // local dev
-                            "https://lms-frontend-iy6j-fp94p0fde-adapaka-papinaidus-projects.vercel.app" // Vercel frontend
+                            "http://localhost:3000", // React local dev
+                            "https://lms-frontend-five-tau.vercel.app" // deployed frontend
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
