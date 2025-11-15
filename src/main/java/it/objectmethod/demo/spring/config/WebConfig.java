@@ -15,12 +15,12 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // all endpoints
                         .allowedOrigins(
-                            "http://localhost:3000", 
-                            "https://lms-frontend-l12z.vercel.app"
+                            "http://localhost:3000", // React local dev
+                            "https://lms-frontend-2t91.vercel.app" // Production frontend
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowedHeaders("*") // Allow all headers
+                        .allowCredentials(true); // Allow cookies/auth headers
             }
         };
     }
