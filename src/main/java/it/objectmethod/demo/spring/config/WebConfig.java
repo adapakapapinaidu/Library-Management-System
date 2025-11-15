@@ -16,8 +16,8 @@ public class WebConfig {
                 registry.addMapping("/**") // all endpoints
                         .allowedOrigins(
                             "http://localhost:3000", 
-                            "https://lms-frontend-r244.vercel.app"
-                        ) // local + Vercel frontend
+                            "https://lms-frontend-l12z.vercel.app" // add your deployed frontend
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
