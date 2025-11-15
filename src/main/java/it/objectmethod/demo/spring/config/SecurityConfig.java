@@ -13,17 +13,18 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http
-            .csrf().disable() // Disable CSRF for APIs (token-based)
-            .cors() // Enable CORS
+            .csrf().disable()
+            .cors()
             .and()
             .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // No session, token only
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
-            .authorizeHttpRequests()
-                .requestMatchers("/users/login", "/users/register").permitAll() // Allow public endpoints
-                .anyRequest().authenticated() // Other endpoints require authentication
-            .and()
-            .httpBasic(); // Optional: basic auth for testing
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/users/login").permitAll()
+                .requestMatchers("/users/register").permitAll()
+                .anyRequest().authenticated()
+            )
+            .httpBasic();
 
         return http.build();
     }
