@@ -13,7 +13,7 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // all endpoints
+                registry.addMapping("/**") // All endpoints
                         .allowedOrigins(
                             "http://localhost:3000", // React local dev
                             "https://lms-frontend-2t91.vercel.app" // Production frontend
