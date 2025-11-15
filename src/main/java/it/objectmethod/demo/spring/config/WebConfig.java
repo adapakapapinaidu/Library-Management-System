@@ -13,14 +13,14 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // All endpoints
+                registry.addMapping("/**") // all endpoints
                         .allowedOrigins(
-                            "http://localhost:3000", // React local dev
-                            "https://lms-frontend-2t91.vercel.app" // Production frontend
+                            "http://localhost:3000", // local dev
+                            "https://lms-frontend-iy6j-fp94p0fde-adapaka-papinaidus-projects.vercel.app" // Vercel frontend
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*") // Allow all headers
-                        .allowCredentials(true); // Allow cookies/auth headers
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
