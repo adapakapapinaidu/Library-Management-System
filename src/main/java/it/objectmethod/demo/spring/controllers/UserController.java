@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import it.objectmethod.demo.spring.models.UserObject;
 import it.objectmethod.demo.spring.services.UsersService;
 
-@CrossOrigin(origins = "http://localhost:3000") // Allow React frontend access
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://lms-frontend-five-tau.vercel.app"
+})
 @RestController
 @RequestMapping("/users")
 public class UserController {
