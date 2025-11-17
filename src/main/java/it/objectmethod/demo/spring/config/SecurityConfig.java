@@ -14,10 +14,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .cors()   // Use the CorsFilter below
+            .cors()  // use the CorsFilter bean
             .and()
             .csrf().disable()
-            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // Allow all requests
+            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 
         return http.build();
     }
@@ -25,7 +25,10 @@ public class SecurityConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("https://lms-frontend-db7zlry21-adapaka-papinaidus-projects.vercel.app"));
+        config.setAllowedOrigins(Arrays.asList(
+            "https://lms-frontend-db7zlry21-adapaka-papinaidus-projects.vercel.app",
+            "https://lms-frontend-five-tau.vercel.app"  // add all your frontend URLs
+        ));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("*"));
         config.setAllowCredentials(true);
