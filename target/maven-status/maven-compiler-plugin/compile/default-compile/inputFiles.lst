@@ -15,5 +15,4 @@
 /workspaces/Library-Management-System/src/main/java/it/objectmethod/demo/spring/models/MemberObject.java
 /workspaces/Library-Management-System/src/main/java/it/objectmethod/demo/spring/services/JwtService.java
 /workspaces/Library-Management-System/src/main/java/it/objectmethod/demo/spring/services/MembersService.java
-/workspaces/Library-Management-System/src/main/java/it/objectmethod/demo/spring/config/WebConfig.java
 /workspaces/Library-Management-System/src/main/java/it/objectmethod/demo/spring/controllers/UserController.java
