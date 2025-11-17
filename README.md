@@ -49,5 +49,3 @@ mvn spring-boot:run
 5. **Live Demo:**
 
 * Check the live backend at: [https://library-management-system-fixa.onrender.com/](https://library-management-system-fixa.onrender.com/)
-
-Do you want me to do that next?
