@@ -1,5 +1,3 @@
-package it.objectmethod.demo.spring.config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,12 +11,12 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors()    // Enable CORS
+        http.cors() // Enable CORS
             .and()
             .csrf().disable()
             .authorizeRequests()
-            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()  // allow preflight requests
-            .antMatchers("/**").permitAll();
+            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll() // allow preflight requests
+            .antMatchers("/**").permitAll(); // allow all other requests
         return http.build();
     }
 }
