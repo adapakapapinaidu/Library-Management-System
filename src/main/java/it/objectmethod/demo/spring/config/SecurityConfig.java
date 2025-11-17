@@ -14,14 +14,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .cors().and()          // Use the CorsFilter
-            .csrf().disable()      // Disable CSRF
+            .cors()   // Use the CorsFilter below
+            .and()
+            .csrf().disable()
             .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // Allow all requests
 
         return http.build();
     }
 
-    // CorsFilter Bean (used by Spring Security)
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
