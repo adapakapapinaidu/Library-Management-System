@@ -1,4 +1,4 @@
-Here’s an **effective, polished README.md specifically for the backend**, with your requested repository link included:
+Here’s the **updated backend README.md** including your live demo link:
 
 ---
 
@@ -45,3 +45,9 @@ mvn spring-boot:run
 
 * Backend runs on: `http://localhost:8080`
 * Test endpoints using Postman or your preferred API client
+
+5. **Live Demo:**
+
+* Check the live backend at: [https://library-management-system-fixa.onrender.com/](https://library-management-system-fixa.onrender.com/)
+
+Do you want me to do that next?
