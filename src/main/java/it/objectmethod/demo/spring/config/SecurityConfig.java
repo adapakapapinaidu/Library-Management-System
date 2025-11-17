@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -11,19 +12,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        httpSecurity
+        http
             .csrf(csrf -> csrf.disable())
             .cors(cors -> {})
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/users/register").permitAll()
-                .requestMatchers("/users/login").permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/users/register")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/users/login")).permitAll()
                 .anyRequest().authenticated()
             )
             .httpBasic(basic -> {});
 
-        return httpSecurity.build();
+        return http.build();
     }
 
     @Bean
