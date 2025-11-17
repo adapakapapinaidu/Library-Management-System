@@ -11,7 +11,7 @@ import it.objectmethod.demo.spring.services.UsersService;
 
 @CrossOrigin(origins = {
     "http://localhost:3000",
-    "https://lms-frontend-five-tau.vercel.app",
+    "https://lms-frontend-nine-neon.vercel.app",
     "https://lms-frontend-kfv1u54id-adapaka-papinaidus-projects.vercel.app"
 })
 @RestController
