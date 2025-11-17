@@ -1,3 +1,5 @@
+package it.objectmethod.demo.spring.config;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -12,8 +14,12 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://lms-frontend-kfv1u54id-adapaka-papinaidus-projects.vercel.app")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedOrigins(
+                            "http://localhost:3000",
+                            "https://lms-frontend-five-tau.vercel.app",
+                            "https://lms-frontend-kfv1u54id-adapaka-papinaidus-projects.vercel.app"
+                        )
+                        .allowedMethods("*")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
