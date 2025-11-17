@@ -45,17 +45,3 @@ mvn spring-boot:run
 
 * Backend runs on: `http://localhost:8080`
 * Test endpoints using Postman or your preferred API client
-
-## Contributing
-
-Contributions, suggestions, and bug reports are welcome! Open an issue or submit a pull request.
-
-## License
-
-Licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-If you want, I can also **make a separate, equally polished frontend README.md** that matches this style for consistency across your project.
-
-Do you want me to do that next?
