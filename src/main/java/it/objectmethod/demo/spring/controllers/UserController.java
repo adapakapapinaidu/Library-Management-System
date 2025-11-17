@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import it.objectmethod.demo.spring.models.UserObject;
 import it.objectmethod.demo.spring.services.UsersService;
 
-@CrossOrigin(origins = "https://lms-frontend-nine-neon.vercel.app")
+@CrossOrigin(origins = "https://lms-frontend-db7zlry21-adapaka-papinaidus-projects.vercel.app")
 @RestController
 @RequestMapping("/users")
 public class UserController {
