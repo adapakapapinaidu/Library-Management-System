@@ -18,12 +18,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .cors()  // Enable CORS
+            .cors() // enable CORS
             .and()
-            .csrf().disable() // Disable CSRF for APIs
+            .csrf().disable() // disable CSRF for API requests
             .authorizeRequests()
-                .antMatchers("/users/**").permitAll() // allow all /users requests
+                .antMatchers("/users/**").permitAll() // allow your endpoints
                 .anyRequest().authenticated();
+
         return http.build();
     }
 
