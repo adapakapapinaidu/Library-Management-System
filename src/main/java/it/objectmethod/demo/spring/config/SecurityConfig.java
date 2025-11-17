@@ -11,18 +11,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
-        http
+        httpSecurity
             .csrf(csrf -> csrf.disable())
             .cors(cors -> {})
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/users/register", "/users/login").permitAll()
+                .requestMatchers("/users/register").permitAll()
+                .requestMatchers("/users/login").permitAll()
                 .anyRequest().authenticated()
             )
-            .httpBasic(http -> {});
+            .httpBasic(basic -> {});
 
-        return http.build();
+        return httpSecurity.build();
     }
 
     @Bean
