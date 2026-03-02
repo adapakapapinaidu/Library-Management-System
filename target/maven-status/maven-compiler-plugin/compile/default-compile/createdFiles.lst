@@ -1,3 +1,4 @@
+it/objectmethod/demo/spring/config/SecurityConfig.class
 it/objectmethod/demo/spring/repository/MemberRepository.class
 it/objectmethod/demo/spring/Application.class
 it/objectmethod/demo/spring/models/MemberObject.class
@@ -5,13 +6,13 @@ it/objectmethod/demo/spring/models/BookObject.class
 it/objectmethod/demo/spring/models/UserObject.class
 it/objectmethod/demo/spring/services/JwtService.class
 it/objectmethod/demo/spring/utils/Constants.class
-it/objectmethod/demo/spring/services/UsersService.class
 it/objectmethod/demo/spring/controllers/filters/AuthenticationFilter.class
+it/objectmethod/demo/spring/services/UsersService.class
 it/objectmethod/demo/spring/controllers/MembersController.class
 it/objectmethod/demo/spring/controllers/UserController.class
 it/objectmethod/demo/spring/controllers/HomeController.class
+it/objectmethod/demo/spring/config/WebConfig.class
 it/objectmethod/demo/spring/services/BooksService.class
-SecurityConfig.class
 it/objectmethod/demo/spring/repository/UserRepository.class
 it/objectmethod/demo/spring/controllers/BooksController.class
 it/objectmethod/demo/spring/repository/BookRepository.class
